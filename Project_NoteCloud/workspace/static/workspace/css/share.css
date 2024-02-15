@@ -1,0 +1,226 @@
+html, body {
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+aside {
+    float: left;
+    background: white;
+    width: 100%;
+    height: 10%;
+    border: none;
+    border-radius: 0 0 30px 0;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+aside img {
+    float: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+}
+
+aside .button-user {
+    font-family: 'Marmelad', sans-serif;
+    float: left;
+    font-size: 2vw;
+    color: #000000;
+    display: block;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 26%;
+}
+
+aside .button-user:hover, aside .button-user a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    aside .button-user {
+        font-size: 4vw;
+    }
+}
+
+aside .button-import {
+    font-family: 'Marmelad', sans-serif;
+    float: left;
+    font-size: 2vw;
+    color: #000000;
+    display: block;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 36%;
+}
+
+aside .button-import:hover, aside .button-import a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    aside .button-import {
+        font-size: 4vw;
+    }
+}
+
+aside .button-export {
+    font-family: 'Marmelad', sans-serif;
+    float: left;
+    font-size: 2vw;
+    color: #000000;
+    display: block;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 46%;
+}
+
+aside .button-export:hover, aside .button-export a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    aside .button-export {
+        font-size: 4vw;
+    }
+}
+
+aside .button-exit {
+    font-family: 'Marmelad', sans-serif;
+    float: right;
+    font-size: 2.5vw;
+    color: #000000;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2%;
+}
+
+aside .button-exit:hover, aside .button-exit a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    aside .button-exit {
+        font-size: 4.5vw;
+    }
+}
+
+.aside-left-block {
+    float: left;
+    background: none;
+    width: 25%;
+    height: 90%;
+    border: none;
+    border-radius: 0 0 0 0;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.aside-left-block .button-back {
+    font-family:"Marmelad", sans-serif;
+    font-size: 2.6vw;
+    color: #DDA0DD;
+    background: none;
+    border: none;
+    margin-top: 2%;
+    margin-left: 25%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.aside-left-block .title-button {
+    font-family:"Marmelad", sans-serif;
+    font-size: 2.2vw;
+    color: black;
+    background: none;
+    border: none;
+    width: 80%;
+    height: 10%;
+    margin-left: 2%;
+    transition: all .6s ease;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.aside-left-block .title-button:hover, .aside-left-block .title-button a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+.title-button {
+  float: left;
+  margin-right: 10px;
+}
+
+.div-center {
+    float: left;
+    background: none;
+    width: 75%;
+    height: 90%;
+    border: none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+}
+
+.input-text {
+    font-family:"Marmelad", sans-serif;
+    font-size: 3.5vw;
+    margin-top: 1%;
+    margin-left: 1%;
+    color: black;
+    background: none;
+    width: 73%;
+    height: 20%;
+    border-radius: 10px 10px 10px 10px;
+    border-color: #DDA0DD;
+}
+
+.button-save {
+    font-family:"Marmelad", sans-serif;
+    font-size: 2vw;
+    margin-top: 2%;
+    color: #DDA0DD;
+    background: none;
+    border: none;
+    width: 25%;
+    height: 3%;
+    position: fixed;
+    bottom: 2%;
+    left: 23%;
+    padding: 0;
+    z-index: 9999;
+}
+
+.title-textarea {
+    font-family:"Marmelad", sans-serif;
+    color: #DDA0DD;
+    margin-top: 2%;
+    margin-left: 1%;
+    font-size: 2.2vw;
+}
+
+.login-h {
+    float: left;
+    font-family:"Marmelad", sans-serif;
+    color: black;
+    margin-left: 1%;
+    font-size: 1.8vw;
+}

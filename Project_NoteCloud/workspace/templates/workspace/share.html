@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NoteCloud [Общий доступ]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'workspace/css/share.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+</head>
+<body>
+    <aside>
+        <a href="/"><img src="{% static 'workspace/img/logo_web2.png' %}" width="20%" alt="logotype" border="0px"></a>
+        <a href="/workspace/share"><h class="button-user"><i class="fa-solid fa-user-group"></i></h></a>
+        <a href="/user/logout"><h class="button-exit"><i class="fa-solid fa-arrow-right-from-bracket"></i></i></h></a>
+    </aside>
+    <aside class="aside-left-block">
+        <a href="/workspace"><h3 class="button-back"><i class="fa-solid fa-arrow-left-long"></i>  Назад</h3></a>
+        <div style="height: 80%; overflow: auto; margin-top: 2%;">
+            <ul class="ul-title-delete">
+                 {% for title in titles %}
+                    <form method="post" action="{% url 'send_share' %}" class="get-share">
+                        {% csrf_token %}
+                        <button type="submit" class="title-button" name="title" value="{{ title }}">{{ title }}</button>
+                    </form>
+                {% endfor %}
+            </ul>
+        </div>
+    </aside>
+    {% if title %}
+        <h class="title-textarea">{{ title }}</h>
+        <form method="post" action="{% url 'save_share' %}">
+            {% csrf_token %}
+            <h2 class="login-h">id первого пользователя: </h2>
+            {% if logged_in_user_id == author_id %}
+                <input type="text" id="user1" name="user1" class="input-text" value="{{ user1_id }}">
+            {% else %}
+                <input type="text" id="user1" name="user1" class="input-text" value="{{ user1_id }}" readonly>
+            {% endif %}
+            <h2 class="login-h">id второго пользователя: </h2>
+            {% if logged_in_user_id == author_id %}
+                <input type="text" id="user2" name="user2" class="input-text" value="{{ user2_id }}">
+            {% else %}
+                <input type="text" id="user2" name="user2" class="input-text" value="{{ user2_id }}" readonly>
+            {% endif %}
+            <h2 class="login-h">id третьего пользователя: </h2>
+            {% if logged_in_user_id == author_id %}
+                <input type="text" id="user3" name="user3" class="input-text" value="{{ user3_id }}">
+            {% else %}
+                <input type="text" id="user3" name="user3" class="input-text" value="{{ user3_id }}" readonly>
+            {% endif %}
+            <input type="hidden" name="title" value="{{ title }}" readonly>
+            <button type="submit" class="button-save">Сохранить изменения</button>
+        </form>
+    {% endif %}
+</body>
+</html>

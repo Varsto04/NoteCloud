@@ -1,0 +1,34 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    NoteCloud
+{% endblock %}
+
+{% block content %}
+    <aside class="third-aside">
+        <h class="center_panel-h-slogan">NoteCloud: твои заметки всегда с тобой!</h>
+    </aside>
+
+    <aside class="second-aside">
+        <span class="center_panel-span"><h2 style="">Записывайте</h2> NoteCloud предоставляет простой и интуитивно понятный интерфейс для создания и организации заметок. Вы можете быстро записывать свои мысли, идеи или важные информационные фрагменты в любое время и в любом месте.</span>
+    </aside>
+    <img src="{% static 'main/img/banner2_v2.jpg' %}" alt="banner" border="0px" class="center_panel-img">
+
+    <img src="{% static 'main/img/banner1.jpg' %}" alt="banner" border="0px" class="center_panel-img2">
+    <aside class="fourth-aside">
+        <span class="center_panel-span2"><h2 style="">Создавайте</h2>NoteCloud позволяет вам создавать структурированные списки задач или дел, которые помогут вам организовать свою работу или повседневные дела. Вы можете отслеживать выполнение задач и удобно управлять своими обязанностями.</span>
+    </aside>
+
+    <aside class="fifth-aside">
+        <span class="center_panel-span3"><h2 style="">Вместе</h2>NoteCloud также предлагает возможность общего доступа к заметкам. Вы можете пригласить других пользователей NoteCloud просматривать и редактировать ваши заметки. Это очень удобно, если вы работаете в команде или хотите совместно работать над проектами или задачами.</span>
+    </aside>
+    <img src="{% static 'main/img/banner3.jpg' %}" alt="banner" border="0px" class="center_panel-img3">
+
+    <aside class="sixth-aside">
+        <span class="center_panel-span4">NoteCloud предлагает удобный способ импортировать и экспортировать заметки из других файловых форматов. Вы можете загружать существующие заметки из различных источников или экспортировать свои заметки для использования в других приложениях или устройствах.</span>
+    </aside>
+    <aside class="seventh-aside">
+        <span class="center_panel-span5">NoteCloud предлагает функцию оповещений, которая поможет вам не пропустить важные сроки или напоминания. Вы можете установить оповещения для задач или событий, и NoteCloud будет напоминать вам о них в нужное время.</span>
+    </aside>
+        {% endblock %}

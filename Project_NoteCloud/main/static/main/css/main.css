@@ -1,0 +1,451 @@
+html, body {
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+aside {
+    float: left;
+    background: white;
+    width: 100%;
+    height: 10%;
+    border: none;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+aside img {
+    float: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+}
+
+aside .top-panel-h-login {
+    font-family: 'Marmelad', sans-serif;
+    margin-right: 2%;
+    float: right;
+    font-size: 2.5vw;
+    color: #000000;
+    display: block;
+    transition: all .6s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2%;
+}
+
+@media (max-width: 800px) {
+    aside .top-panel-h-login {
+        font-size: 4.5vw;
+    }
+}
+
+aside .top-panel-h-login:hover, aside .top-panel-h-login a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+}
+
+aside .top-panel-h-edit {
+    font-family: 'Marmelad', sans-serif;
+    margin-right: 2%;
+    float: right;
+    font-size: 2.5vw;
+    color: #000000;
+    display: block;
+    transition: all .6s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7%;
+}
+
+@media (max-width: 800px) {
+    aside .top-panel-h-edit {
+        font-size: 4.5vw;
+    }
+}
+
+aside .top-panel-h-edit:hover, aside .top-panel-h-edit a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+}
+
+aside .top-panel-h1 {
+    font-family: 'Marmelad', sans-serif;
+    float: left;
+    font-size: 2.5vw;
+    color: #000000;
+    transition: all .6s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30%;
+}
+
+@media (max-width: 800px) {
+    aside .top-panel-h1 {
+        font-size: 3.5vw;
+    }
+}
+
+aside .top-panel-h2 {
+    font-family: 'Marmelad', sans-serif;
+    float: left;
+    font-size: 2.5vw;
+    color: #000000;
+    transition: all .6s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+}
+
+@media (max-width: 800px) {
+    aside .top-panel-h2 {
+        font-size: 3.5vw;
+        left: 54%;
+    }
+}
+
+aside .top-panel-h1:hover, aside .top-panel-h1 a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+}
+
+aside .top-panel-h2:hover, aside .top-panel-h2 a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+}
+
+.third-aside {
+    display: flex;
+    align-items: center;
+    background: none;
+    width: 100%;
+    height: 24%;
+    border: none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    margin-top: 3%;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.third-aside .center_panel-h-slogan {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 3vw;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+@media (max-width: 800px) {
+    .third-aside .center_panel-h-slogan {
+        font-size: 5.2vw;
+    }
+}
+
+.second-aside {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    background: none;
+    width: 48%;
+    height: 70%;
+    border: none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+    .second-aside {
+        width: 100%;
+        margin-top: 3%;
+    }
+}
+
+
+.second-aside .center_panel-span {
+    font-size: 2vw;
+    font-family: 'Marmelad', sans-serif;
+    color: #000000;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .second-aside .center_panel-span {
+        font-size: 4.2vw;
+    }
+}
+
+.center_panel-img {
+    width: 50%;
+    height: 70%;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+@media (max-width: 800px) {
+    .center_panel-img {
+        width: 100%;
+        margin-top: 3%;
+    }
+}
+
+.center_panel-img2 {
+    float: left;
+    width: 48%;
+    height: 75%;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 1%;
+}
+
+@media (max-width: 800px) {
+    .center_panel-img2 {
+        width: 100%;
+        margin-top: 3%;
+    }
+}
+
+.fourth-aside {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 2%;
+    background: none;
+    width: 50%;
+    height: 75%;
+    border: none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+    .fourth-aside {
+        width: 100%;
+        margin-top: 3%;
+    }
+}
+
+.fourth-aside .center_panel-span2 {
+    font-size: 2vw;
+    font-family: 'Marmelad', sans-serif;
+    color: #000000;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+@media (max-width: 800px) {
+    .fourth-aside .center_panel-span2 {
+        font-size: 4.2vw;
+    }
+}
+
+.fifth-aside {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    background: none;
+    width: 48%;
+    height: 85%;
+    border: none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+    .fifth-aside {
+        width: 100%;
+        margin-top: 3%;
+    }
+}
+
+.fifth-aside .center_panel-span3 {
+    font-size: 2vw;
+    font-family: 'Marmelad', sans-serif;
+    color: #000000;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .fifth-aside .center_panel-span3 {
+        font-size: 4.2vw;
+    }
+}
+
+.center_panel-img3 {
+    width: 50%;
+    height: 85%;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+@media (max-width: 800px) {
+    .center_panel-img3 {
+        width: 100%;
+        margin-top: 3%;
+    }
+}
+
+.sixth-aside {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    background: none;
+    width: 48%;
+    height: 60%;
+    border: none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+    .sixth-aside {
+        width: 100%;
+        margin-top: 3%;
+    }
+}
+
+.sixth-aside .center_panel-span4 {
+    font-size: 2vw;
+    font-family: 'Marmelad', sans-serif;
+    color: #000000;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .sixth-aside .center_panel-span4 {
+        font-size: 4.2vw;
+    }
+}
+
+.seventh-aside {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 2%;
+    background: none;
+    width: 50%;
+    height: 60%;
+    border: none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+    .seventh-aside {
+        width: 100%;
+        margin-top: 3%;
+    }
+}
+
+.seventh-aside .center_panel-span5 {
+    font-size: 2vw;
+    font-family: 'Marmelad', sans-serif;
+    color: #000000;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+@media (max-width: 800px) {
+    .seventh-aside .center_panel-span5 {
+        font-size: 4.2vw;
+    }
+}
+
+.developers-aside {
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+    background: none;
+    width: 60%;
+    height: 60%;
+    border: none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.developers-aside ul {list-style: none;}
+.developers-aside ul li{
+    font-family: 'Marmelad', sans-serif;
+    margin-left: 8%;
+    float: left;
+    font-size: 2.5vw;
+    color: #000000;
+    display: block;
+    margin-top: 3%;
+    transition: all .6s ease;
+    clear: both;
+}
+
+.developers-aside ul li:hover, .second-aside ul a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+.second-aside .center_panel-span h2 {
+    font-size: 2.6vw;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+@media (max-width: 800px) {
+    .second-aside .center_panel-span h2 {
+        font-size: 4.8vw;
+    }
+}
+
+.fourth-aside .center_panel-span2 h2 {
+    font-size: 2.6vw;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+@media (max-width: 800px) {
+    .fourth-aside .center_panel-span2 h2 {
+        font-size: 4.8vw;
+    }
+}
+
+.fifth-aside .center_panel-span3 h2 {
+    font-size: 2.6vw;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+@media (max-width: 800px) {
+    .fifth-aside .center_panel-span3 h2 {
+        font-size: 4.8vw;
+    }
+}

@@ -1,0 +1,160 @@
+html, body {
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+aside {
+    margin-left: 25%;
+    margin-top: 5%;
+    float: left;
+    background: white;
+    width: 50%;
+    height: 80%;
+    border: none;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 10px 20px 40px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    aside {
+        width: 86%;
+        height: 60%;
+        margin-left: 7%;
+        margin-top: 20%;
+    }
+}
+
+
+aside img {
+    width: 60%;
+    height: 16%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media (max-width: 800px) {
+    aside img {
+        width: 60%;
+        height: 8%;
+    }
+}
+
+aside h3 {
+    font-family:"Marmelad", sans-serif;
+    margin-top: 2%;
+    color: #000000;
+    font-size: 1.8vw;
+    width: 90%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    aside h3 {
+        font-size: 4vw;
+    }
+}
+
+aside form {
+    font-family:"Marmelad", sans-serif;
+    margin-top: 4%;
+    color: #000000;
+    display: block;
+    font-size: 1.3vw;
+    width: 90%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    aside form {
+        font-size: 3.5vw;
+    }
+}
+
+aside .button-exit {list-style: none;}
+aside .button-exit {
+    font-family:"Marmelad", sans-serif;
+    font-size: 1.5vw;
+    color: #000000;
+    display: block;
+    margin-top: 10%;
+    width: 90%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    aside .button-exit {
+        font-size: 3.7vw;
+    }
+}
+
+aside .button-exit:hover, aside .button-exit a:hover {
+    color: #DDA0DD;
+    text-decoration: none;
+}
+
+aside button {
+    font-family:"Marmelad", sans-serif;
+    font-size: 2.2vw;
+    margin-top: 3%;
+    color: #DDA0DD;
+    background: none;
+    border: none;
+    width: 90%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    aside button {
+        font-size: 4.4vw;
+    }
+}
+
+aside h2{
+    margin-top: 2%;
+    font-family:"Marmelad", sans-serif;
+    color: #000000;
+    display: block;
+    font-size: 2vw;
+    width: 90%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    aside h2 {
+        font-size: 4.2vw;
+        margin-top: 8%;
+    }
+}
+
+aside .button-second {
+    font-family:"Marmelad", sans-serif;
+    font-size: 2.4vw;
+    margin-top: 1%;
+    color: #DDA0DD;
+    background: none;
+    border: none;
+    width: 90%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    aside .button-second {
+        font-size: 4.6vw;
+    }
+}

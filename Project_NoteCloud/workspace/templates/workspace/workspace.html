@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NoteCloud [Рабочая область]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'workspace/css/workspace.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        window.onload = function() {
+            initializeBlock('.top-bar1', '.resizable-textarea1');
+            initializeBlock('.top-bar2', '.resizable-textarea2');
+            initializeBlock('.top-bar3', '.resizable-textarea3');
+
+            function initializeBlock(topBarSelector, textareaSelector) {
+                var topBar = document.querySelector(topBarSelector);
+                var resizableTextarea = document.querySelector(textareaSelector);
+
+                if (topBar && resizableTextarea) {
+                    var isDragging = false;
+                    var offsetX, offsetY;
+
+                    topBar.addEventListener('mousedown', function(e) {
+                        isDragging = true;
+                        offsetX = e.clientX - resizableTextarea.getBoundingClientRect().left;
+                        offsetY = e.clientY - resizableTextarea.getBoundingClientRect().top;
+                    });
+
+                    document.addEventListener('mousemove', function(e) {
+                        if (isDragging) {
+                            var newLeft = e.clientX - offsetX;
+                            var newTop = e.clientY - offsetY;
+                            newLeft = Math.min(Math.max(newLeft, window.innerWidth * 0.25), window.innerWidth - resizableTextarea.offsetWidth);
+                            newTop = Math.min(Math.max(newTop, window.innerHeight * 0.17), window.innerHeight - resizableTextarea.offsetHeight);
+                            resizableTextarea.style.left = newLeft + 'px';
+                            resizableTextarea.style.top = newTop + 'px';
+                        }
+                    });
+
+                    document.addEventListener('mouseup', function() {
+                        isDragging = false;
+                    });
+                }
+            }
+        };
+    </script>
+    <script>
+          function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        function saveToDatabase_author() {
+          var textAreaField = document.getElementsByName('data_author')[0];
+          var text = textAreaField.value;
+          var titleElement = document.querySelector('.title-textarea');
+          var title = titleElement.textContent;
+
+          var csrftoken = getCookie('csrftoken');  // Получаем CSRF-токен из куки
+
+          // Делаем AJAX-запрос к серверу, включая CSRF-токен в заголовке
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "/workspace/auto_save", true);
+          xhr.setRequestHeader('X-CSRFToken', csrftoken);  // Добавляем CSRF-токен в заголовок запроса
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.send(JSON.stringify({text: text, title: title}));
+        }
+
+        function saveToDatabase_user1() {
+          var textAreaField = document.getElementsByName('data_user1')[0];
+          var text = textAreaField.value;
+          var titleElement = document.querySelector('.title-textarea');
+          var title = titleElement.textContent;
+
+          var csrftoken = getCookie('csrftoken');  // Получаем CSRF-токен из куки
+
+          // Делаем AJAX-запрос к серверу, включая CSRF-токен в заголовке
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "/workspace/auto_save", true);
+          xhr.setRequestHeader('X-CSRFToken', csrftoken);  // Добавляем CSRF-токен в заголовок запроса
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.send(JSON.stringify({text: text, title: title}));
+        }
+
+        function saveToDatabase_user2() {
+          var textAreaField = document.getElementsByName('data_user2')[0];
+          var text = textAreaField.value;
+          var titleElement = document.querySelector('.title-textarea');
+          var title = titleElement.textContent;
+
+          var csrftoken = getCookie('csrftoken');  // Получаем CSRF-токен из куки
+
+          // Делаем AJAX-запрос к серверу, включая CSRF-токен в заголовке
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "/workspace/auto_save", true);
+          xhr.setRequestHeader('X-CSRFToken', csrftoken);  // Добавляем CSRF-токен в заголовок запроса
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.send(JSON.stringify({text: text, title: title}));
+        }
+
+        function saveToDatabase_user3() {
+          var textAreaField = document.getElementsByName('data_user3')[0];
+          var text = textAreaField.value;
+          var titleElement = document.querySelector('.title-textarea');
+          var title = titleElement.textContent;
+
+          var csrftoken = getCookie('csrftoken');  // Получаем CSRF-токен из куки
+
+          // Делаем AJAX-запрос к серверу, включая CSRF-токен в заголовке
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "/workspace/auto_save", true);
+          xhr.setRequestHeader('X-CSRFToken', csrftoken);  // Добавляем CSRF-токен в заголовок запроса
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.send(JSON.stringify({text: text, title: title}));
+        }
+    </script>
+</head>
+<body>
+    <aside>
+        <a href="/"><img src="{% static 'workspace/img/logo_web2.png' %}" width="20%" alt="logotype" border="0px"></a>
+        <a href="/workspace/share"><h class="button-user"><i class="fa-solid fa-user-group"></i></h></a>
+        <form id="uploadForm" method="post" enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="file" style="display:none;">
+            <button type="button" onclick="document.getElementById('fileInput').click()" class="button-import">
+                <i class="fa-solid fa-file-import"></i>
+            </button>
+            <script>
+                document.getElementById('fileInput').addEventListener('change', function() {
+                    var form = new FormData();
+                    form.append('file', document.getElementById('fileInput').files[0]);
+
+                    // Получение CSRF токена
+                    var csrftoken = getCookie('csrftoken');
+
+                    // Отправка файла с CSRF токеном
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/workspace/upload_file', true);
+                    xhr.setRequestHeader('X-CSRFToken', csrftoken);
+                    xhr.setRequestHeader('enctype', 'multipart/form-data');
+                    xhr.send(form);
+                });
+            </script>
+        </form>
+        {% if title %}
+            <form method="post" action="{% url 'download_file' %}">
+                {% csrf_token %}
+                <input type="hidden" name="title" value="{{ title }}" readonly>
+                <input type="hidden" name="hidden_username_author" value="{{ username_author }}" readonly>
+                <input type="hidden" name="hidden_data_author" value="{{ content_author }}" readonly>
+                <input type="hidden" name="hidden_username_user1" value="{{ username_user1 }}" readonly>
+                <input type="hidden" name="hidden_data_user1" value="{{ content_user1 }}" readonly>
+                <input type="hidden" name="hidden_username_user2" value="{{ username_user2 }}" readonly>
+                <input type="hidden" name="hidden_data_user2" value="{{ content_user2 }}" readonly>
+                <input type="hidden" name="hidden_username_user3" value="{{ username_user3 }}" readonly>
+                <input type="hidden" name="hidden_data_user3" value="{{ content_user3 }}" readonly>
+                <h class="button-export"><button class="button-export"><i class="fa-solid fa-file-export"></i></button></h>
+            </form>
+        {% endif %}
+        <a href="/user/logout"><h class="button-exit"><i class="fa-solid fa-arrow-right-from-bracket"></i></i></h></a>
+    </aside>
+    <aside class="aside-left-block">
+        <form method="POST" action="{% url 'add_row' %}" class="add">
+            {% csrf_token %}
+            <input type="text" name="new_row" placeholder="Новая заметка" class="input-title">
+            <button type="submit" class="add-button">+</button>
+        </form>
+        <div style="height: 80%; overflow: auto; margin-top: 2%;">
+            <ul class="ul-title-delete">
+                 {% for title in titles %}
+                    <form method="post" action="{% url 'textarea_view' %}" class="get-content">
+                        {% csrf_token %}
+                        <button type="submit" class="title-button" name="title" value="{{ title }}">{{ title }}</button>
+                    </form>
+                    <form method="POST" action="{% url 'delete_row' %}" class="delete">
+                        {% csrf_token %}
+                        <button type="submit" name="title" value="{{ title }}" class="delete-button">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </form>
+                {% endfor %}
+            </ul>
+        </div>
+    </aside>
+    <div class="username">
+        <h3 class="name">{{ request.user.username }}</h3>
+        <h3 class="id_user">id: {{ id_user }}</h3>
+    </div>
+    {% if title %}
+        <h class="title-textarea">{{ title }}</h>
+        {% if author_id == id_user %}
+        <form method="post" action="{% url 'save_data' %}">
+            {% csrf_token %}
+            <div class="resizable-textarea1">
+                <div class="top-bar1"></div>
+                <textarea name="data_author" cols="60">{{ content_author }}</textarea>
+                <script>setInterval(saveToDatabase_author, 20000);</script>
+            </div>
+            <input type="hidden" name="title" value="{{ title }}" readonly>
+            <button type="submit" class="button-save"><i class="fa-solid fa-floppy-disk"></i> Сохранить</button>
+        </form>
+        {% else %}
+            {% if content_author %}
+            <div class="resizable-textarea1">
+                <div class="username_author">{{ username_author }}</div>
+                <div class="top-bar1"></div>
+                <textarea name="data_author" cols="60" readonly>{{ content_author }}</textarea>
+            </div>
+            {% endif %}
+        {% endif %}
+
+        {% if user1_id == id_user %}
+        <form method="post" action="{% url 'save_data' %}">
+            {% csrf_token %}
+            <div class="resizable-textarea2">
+                <div class="top-bar2"></div>
+                <textarea name="data_user1" cols="60">{{ content_user1 }}</textarea>
+                <script>setInterval(saveToDatabase_user1, 20000);</script>
+            </div>
+            <input type="hidden" name="title" value="{{ title }}" readonly>
+            <button type="submit" class="button-save"><i class="fa-solid fa-floppy-disk"></i> Сохранить</button>
+        </form>
+        {% else %}
+            {% if content_user1 %}
+            <div class="resizable-textarea2">
+                <div class="username_user1">{{ username_user1 }}</div>
+                <div class="top-bar2"></div>
+                <textarea name="data_user1" cols="60" readonly>{{ content_user1 }}</textarea>
+            </div>
+            {% endif %}
+        {% endif %}
+
+        {% if user2_id == id_user %}
+        <form method="post" action="{% url 'save_data' %}">
+            {% csrf_token %}
+            <div class="resizable-textarea3">
+                <div class="top-bar3"></div>
+                <textarea name="data_user2" cols="60">{{ content_user2 }}</textarea>
+                <script>setInterval(saveToDatabase_user2, 20000);</script>
+            </div>
+            <input type="hidden" name="title" value="{{ title }}" readonly>
+            <button type="submit" class="button-save"><i class="fa-solid fa-floppy-disk"></i> Сохранить</button>
+        </form>
+        {% else %}
+            {% if content_user2 %}
+            <div class="resizable-textarea3">
+                <div class="username_user2">{{ username_user2 }}</div>
+                <div class="top-bar3"></div>
+                <textarea name="data_user2" cols="60" readonly>{{ content_user2 }}</textarea>
+            </div>
+            {% endif %}
+        {% endif %}
+
+        {% if user3_id == id_user %}
+        <form method="post" action="{% url 'save_data' %}">
+            {% csrf_token %}
+            <div class="resizable-textarea4">
+                <div class="top-bar4"></div>
+                <textarea name="data_user3" cols="60">{{ content_user3 }}</textarea>
+                <script>setInterval(saveToDatabase_user3, 20000);</script>
+            </div>
+            <input type="hidden" name="title" value="{{ title }}" readonly>
+            <button type="submit" class="button-save"><i class="fa-solid fa-floppy-disk"></i> Сохранить</button>
+        </form>
+        {% else %}
+            {% if content_user3 %}
+            <div class="resizable-textarea4">
+                <div class="username_user3">{{ username_user3 }}</div>
+                <div class="top-bar4"></div>
+                <textarea name="data_user3" cols="60" readonly>{{ content_user3 }}</textarea>
+            </div>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+</body>
+</html>

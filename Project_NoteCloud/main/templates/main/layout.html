@@ -1,0 +1,32 @@
+{% load static %}
+{% load pwa %}
+<!doctype html>
+<html lang="ru">
+<head>
+    {% progressive_web_app_meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@1,700&family=Marmelad&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+</head>
+<body>
+    <aside>
+        <a href="/"><img src="{% static 'main/img/logo_web2.png' %}" width="23%" alt="logotype" border="0px"></a>
+        <a href="/installation"><h class="top-panel-h1">Установить</h></a>
+        <a href="/developers"><h class="top-panel-h2">Разработчики</h></a>
+        <a href="workspace/"><h class="top-panel-h-edit"><i class="fa-regular fa-pen-to-square"></i></h></a>
+        <a href="user/login"><h class="top-panel-h-login"><i class="fa-regular fa-user"></i></h></a>
+    </aside>
+    {% block content %}
+    {% endblock %}
+    <main>
+    </main>
+</body>
+</html>
